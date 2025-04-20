@@ -1,0 +1,17 @@
+/* Main */
+
+// main делаем флеkсом для отступов между секциями
+.main {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+
+    @include tablet {
+        row-gap: 80px;
+    }
+
+    @include mobile {
+        row-gap: 60px;
+    }
+}

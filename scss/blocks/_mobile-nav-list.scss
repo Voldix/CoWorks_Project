@@ -1,0 +1,14 @@
+/* Mobile navigation list */
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        font-size: 14px;
+        color: #000;
+    }
+}

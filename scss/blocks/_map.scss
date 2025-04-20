@@ -1,0 +1,39 @@
+/* Map section */
+
+.map {
+    @include scrollTopMargin;
+}
+
+.map__title {
+    margin-bottom: 20px;
+
+    @include mobile {
+        margin-bottom: 10px;
+    }
+}
+
+.map-desc {
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    // для абзацев
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+
+    @include mobile {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+}
+
+.map__iframe {
+    border-radius: 40px;
+
+    @include mobile {
+        height: 400px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}

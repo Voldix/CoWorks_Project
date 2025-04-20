@@ -1,0 +1,21 @@
+/* Footer navigation */
+
+.nav-footer {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    font-size: 14px;
+
+    @include mobile {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+}
+
+a.nav-footer__link {
+    transition: color .3s ease-in;
+
+    &:hover {
+        color: #00ae6c;
+    }
+}

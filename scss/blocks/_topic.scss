@@ -1,0 +1,103 @@
+/* Accordion */
+
+.topic {
+    padding: 30px 0;
+    border-top: 1px solid #ececf1;
+    border-bottom: 1px solid #ececf1;
+
+    + .topic {
+        margin-top: -1px;
+    }
+
+    @include tablet {
+        padding: 20px 0;
+    }
+
+    @include mobile {
+        padding: 15px 0;
+    }
+}
+
+.topic__header {
+
+}
+
+.topic__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    // Hover
+    &:hover:not(:focus-visible) {
+        opacity: 0.5;
+    }
+
+    // Focus
+    // по клику меняем цвет заголовка .topic__title
+    &:active:not(:focus-visible) .topic__title { 
+        color: #00ae6c;
+    }
+
+    // Focus only
+    &:focus-visible {
+        outline-offset: 2px;
+        outline: 1px auto #005fcc;
+    }
+}
+
+.topic__icon {
+    @include mobile {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.topic__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.topic__content {
+    line-height: 1.5;
+
+    // display: none;
+    // Анимируем аккордион для плавного появления
+    max-height: 0;
+    overflow: hidden; // скрываем контент
+    transition: max-height .4s ease-in;
+
+    // Такой способ расчитан на то, что если внутри будет лежать HTML тег
+    // & > *:first-child {
+    //     padding-top: 30px;
+    // }
+}
+
+.topic__content-padding {
+    padding-top: 30px;
+
+    // для доп. абзацов
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+
+    @include tablet {
+        padding-top: 20px;
+    }
+
+    @include mobile {
+        padding-top: 15px;
+        font-size: 14px;
+    }
+}
+
+/* VAR 1 */
+// .topic--open .topic__content {
+//     display: flex;
+// }

@@ -1,0 +1,40 @@
+/* Header */
+
+.header {
+    padding: 40px 0;
+
+    @include mobile {
+        padding: 20px 0;
+    }
+}
+
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px; // страховка
+}
+
+.header__logo {
+    flex-shrink: 0; // отключаем сжатие картинки, если вдруг контента справа будет много
+
+    @include mobile {
+        content: url("./../img/logo-mobile.svg");
+    }
+}
+
+.header__nav {
+    @include mobile {
+        display: none;
+    }
+}
+
+.header__nav-burger {
+    display: none;
+
+    @include mobile {
+        display: block;
+        flex-shrink: 0;
+    }
+}
+

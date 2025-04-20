@@ -1,0 +1,98 @@
+/* Buttons */
+
+.btn-dark, a.btn-dark {
+    display: inline-block; // всегда прописываем для кнопок, что корректно работали padding и т.д.
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 80px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    &--wide {
+        width: 100%;
+    }
+}
+
+.btn-green, a.btn-green {
+    display: inline-block; // всегда прописываем для кнопок, что корректно работали padding и т.д.
+    padding: 10px 20px;
+    background-color: #00ae6c;
+    color: #fff;
+    border-radius: 80px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in;
+    
+    &:hover {
+        background-color: #00d785;
+    }
+}
+
+.btn-outline, a.btn-outline {
+    display: inline-block; // всегда прописываем для кнопок, что корректно работали padding и т.д.
+    padding: 9px 20px; // из-за бордера снижаем отступ на 1 до 9 пикселей, чтоб высота кнопок была одинаковой
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 80px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in, color .3s ease-in;
+    
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.btn-rates, a.btn-rates {
+    display: inline-block; // всегда прописываем для кнопок, что корректно работали padding и т.д.
+    padding: 9px 20px;
+    border: 1px solid #000;
+    border-radius: 80px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in, color .3s ease-in;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.btn-tg, a.btn-tg {
+    display: inline-flex; // убираем возможноcть растягиваться на всю ширину (было бы так, если использовать просто flex)
+    column-gap: 10px;
+    padding: 10px 20px;
+    border-radius: 80px;
+    background-color: #039be5;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in;
+
+    &:hover {
+        background-color: #38bdff;
+    }
+}
+
+.btn-whatsapp, a.btn-whatsapp {
+    display: inline-flex; // убираем возможноcть растягиваться на всю ширину (было бы так, если использовать просто flex)
+    column-gap: 10px;
+    padding: 10px 20px;
+    border-radius: 80px;
+    background-color: #00ae6c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color .3s ease-in;
+
+    &:hover {
+        background-color: #00d785;
+    }
+}

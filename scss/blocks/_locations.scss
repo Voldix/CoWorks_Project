@@ -1,0 +1,50 @@
+/* Locations */
+
+.locations {
+    @include scrollTopMargin;
+}
+
+.location__header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 30px;
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+
+.location__title {
+    max-width: 430px;
+}
+
+.location__controller {
+    display: flex;
+    column-gap: 20px;
+
+    img {
+        @include tablet {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    @include tablet {
+        column-gap: 10px;
+    }
+
+    @include mobile { // убираем верхние кнопки на мобилке
+        display: none;
+    }
+
+    &--mobile {
+        display: none;
+        margin-top: 20px;
+
+        @include mobile {
+            display: block;
+        }
+    }
+}

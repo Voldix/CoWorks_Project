@@ -1,0 +1,52 @@
+/* Each Benefit */
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+
+    @include tablet {
+        column-gap: 20px;
+    }
+
+    @include mobile {
+        column-gap: 15px;
+    }
+}
+
+.benefit__img {
+    flex-shrink: 0; // блокируем сжатие изображения, если вдруг кол-во текста будет объемным
+
+    @include tablet {
+        height: 42px;
+        width: 42px;
+    }
+}
+
+.benefit_desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    & p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #2f2f2f;
+
+            & br {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+}
+
+.benefit__title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+
+    @include tablet {
+        font-size: 18px;
+    }
+}

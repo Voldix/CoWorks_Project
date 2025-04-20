@@ -1,0 +1,49 @@
+/* Containers */
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1200px;
+
+    @include tablet {
+        width: 768px;
+    }
+
+    @include mobile {
+        width: 360px;
+    }
+
+    &--large {
+        max-width: 1510px;
+        width: 100%; /* меняем ширину с фиксированной на 100%, чтоб большой контейнер растягивался, как надо */
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &--tablet {
+        @include tablet {
+            width: auto;
+        }
+    }
+
+    // &--mobile {
+    //     @include mobile {
+    //         width: auto;
+    //     }
+    // }
+
+    &--mobile-no-padding {
+        @include tablet { // сбрасываем отступы на слайдере
+            padding: 0;
+        }
+    }
+}
+
+// id первой картинки СЛАЙДЕРА
+#tns1-item0 {
+    @include tablet { // ставим отступ только на первой картинке слайдера
+        padding-left: 15px;
+    }
+}

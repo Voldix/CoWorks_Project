@@ -1,0 +1,39 @@
+/* Services */
+
+.services {
+    @include scrollTopMargin;
+}
+
+.services__title {
+    margin-bottom: 40px;
+    max-width: 570px;
+
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+
+.services__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+
+    @include mobile {
+        gap: 20px;
+    }
+}
+
+// обертка для карточки srvice, которую мы ограничиваем по ширине
+.services__list-item {
+    max-width: 270px;
+
+    @include tablet {
+        max-width: 354px;
+    }
+
+    @include mobile {
+        max-width: 330px;
+    }
+}
